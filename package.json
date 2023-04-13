@@ -1,0 +1,39 @@
+{
+  "name": "wt-back-end-challenge",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server": "nodemon index.js",
+    "rollback": "knex migrate:rollback",
+    "migrate": "knex seed:run",
+    "seed": "npx knex seed:run",
+    "resetdb": "knex migrate:rollback && knex migrate:latest && knex seed:run",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahargumuser/WT-back-end-challenge.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bahargumuser/WT-back-end-challenge/issues"
+  },
+  "homepage": "https://github.com/bahargumuser/WT-back-end-challenge#readme",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "body-parser": "^1.20.2",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "knex": "^2.4.2",
+    "sqlite3": "^5.1.6"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+}
